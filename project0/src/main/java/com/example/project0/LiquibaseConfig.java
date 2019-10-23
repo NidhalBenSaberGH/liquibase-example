@@ -60,6 +60,7 @@ public class LiquibaseConfig {
         liquibase.setContexts(contexts);
         liquibase.setDefaultSchema(schema);
         liquibase.setDataSource(dataSource);
+
         return liquibase;
     }
 
