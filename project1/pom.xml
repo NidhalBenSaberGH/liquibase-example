@@ -15,7 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>${java.version}</java.version>
 	</properties>
 
 	<dependencies>
@@ -64,9 +64,17 @@
 			<plugin>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-maven-plugin</artifactId>
-				<version>3.6.3</version>
+				<version>${liquibase.version}</version>
 				<configuration>
-					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<propertyFile>${liquibase.properties.file}</propertyFile>
+					<changeLogFile>${liquibase.changeLogFile}</changeLogFile>
+					<outputChangeLogFile>${liquibase.outputChangeLogFile}</outputChangeLogFile>
+					<contexts>${liquibase.contexts}</contexts>
+					<driver>${liquibase.database.driver}</driver>
+					<url>${liquibase.database.url}</url>
+					<defaultSchemaName>${liquibase.database.schema}</defaultSchemaName>
+					<username>${liquibase.database.username}</username>
+					<password>${liquibase.database.password}</password>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -16,6 +16,28 @@
     <version>1.0.0.RELEASE</version>
     <packaging>pom</packaging>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
+        <liquibase.version>3.6.3</liquibase.version>
+        <liquibase-hibernate4.version>3.6</liquibase-hibernate4.version>
+        <org.springframework.version>5.2.0.RELEASE</org.springframework.version>
+        <postgresql.version>42.2.5</postgresql.version>
+        <liquibase.properties.file>classpath:liquibase.properties</liquibase.properties.file>
+        <liquibase.changeLogFile>classpath:/db/changelog/db.changelog-master.xml</liquibase.changeLogFile>
+        <liquibase.database.url>jdbc:postgresql://localhost:5432/demoliquibase</liquibase.database.url>
+        <liquibase.database.username>byblos</liquibase.database.username>
+        <liquibase.database.password>byblos</liquibase.database.password>
+        <liquibase.database.driver>org.postgresql.Driver</liquibase.database.driver>
+        <liquibase.database.schema>public</liquibase.database.schema>
+        <liquibase.outputChangeLogFile>classpath:/db/changelog/liquibase-outputChangeLog.xml</liquibase.outputChangeLogFile>
+        <liquibase.logging.level>debug</liquibase.logging.level>
+        <liquibase.verbose>true</liquibase.verbose>
+        <liquibase.contexts>dev,prod,test</liquibase.contexts>
+
+    </properties>
+
+
 
     <modules>
         <module>project0/pom.xml</module>
