@@ -35,9 +35,6 @@ public class LiquibaseConfig {
     @Value("${driver}")
     private String driver;
 
-    @Value("${outputChangeLogFile}")
-    private String outputChangeLogFile;
-
     @Value("${liquibase.logging}")
     private String liquibaseLogging;
 
@@ -50,14 +47,16 @@ public class LiquibaseConfig {
     @Value("${liquibase.schema}")
     private String schema;
 
+
+
     @Bean
     public SpringLiquibase liquibase() {
+
         final SpringLiquibase liquibase = new SpringLiquibase();
         liquibase.setChangeLog(changelogFile);
         liquibase.setContexts(contexts);
         liquibase.setDefaultSchema(schema);
         liquibase.setDataSource(dataSource);
-
         return liquibase;
     }
 
