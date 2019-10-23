@@ -1,2 +1,2 @@
-# liquibase-example
-demo how to integrate liquibase with spring boot
+# example-Liquibase
+liquibase integration into spring boot
