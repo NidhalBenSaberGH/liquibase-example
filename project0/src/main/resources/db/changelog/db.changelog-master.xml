@@ -8,6 +8,9 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liqui
     <changeSet id="1" author="nidhal">
         <comment>initiating database</comment>
         <sqlFile path="changes/initial-schema-postgresql.sql" relativeToChangelogFile="true"></sqlFile>
+        <rollback>
+            <sqlFile path="changes/rollback/initial-schema-rollback-postgresql.sql"></sqlFile>
+        </rollback>
     </changeSet>
 
     <changeSet id="2" author="nidhal" failOnError="true" dbms="postgresql">
