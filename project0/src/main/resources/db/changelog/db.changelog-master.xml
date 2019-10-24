@@ -7,26 +7,26 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liqui
 
     <changeSet id="1" author="nidhal">
         <comment>initiating database</comment>
-        <sqlFile path="classpath:/db/changelog/changes/initial-schema-postgresql.sql"></sqlFile>
+        <sqlFile path="changes/initial-schema-postgresql.sql" relativeToChangelogFile="true"></sqlFile>
     </changeSet>
 
     <changeSet id="2" author="nidhal" failOnError="true" dbms="postgresql">
         <comment>load countries</comment>
-        <sqlFile path="classpath:/db/changelog/changes/loadCOUNTRIES.sql"></sqlFile>
+        <sqlFile path="changes/loadCOUNTRIES.sql" relativeToChangelogFile="true"></sqlFile>
     </changeSet>
 
     <changeSet id="3" author="nidhal" failOnError="true" dbms="postgresql">
         <comment>load cites</comment>
-        <sqlFile path="classpath:/db/changelog/changes/loadCITIES.sql"></sqlFile>
+        <sqlFile path="changes/loadCITIES.sql" relativeToChangelogFile="true"></sqlFile>
     </changeSet>
 
     <changeSet id="4" author="nidhal" failOnError="true" dbms="postgresql">
         <comment>load data</comment>
-        <sqlFile path="classpath:/db/changelog/changes/loadAIRLINES.sql"></sqlFile>
-        <sqlFile path="classpath:/db/changelog/changes/loadFLIGHTS1.sql"></sqlFile>
-        <sqlFile path="classpath:/db/changelog/changes/loadFLIGHTS2.sql"></sqlFile>
-        <sqlFile path="classpath:/db/changelog/changes/loadFLIGHTAVAILABILITY1.sql"></sqlFile>
-        <sqlFile path="classpath:/db/changelog/changes/loadFLIGHTAVAILABILITY2.sql"></sqlFile>
+        <sqlFile path="changes/loadAIRLINES.sql" relativeToChangelogFile="true"></sqlFile>
+        <sqlFile path="changes/loadFLIGHTS1.sql" relativeToChangelogFile="true"></sqlFile>
+        <sqlFile path="changes/loadFLIGHTS2.sql" relativeToChangelogFile="true"></sqlFile>
+        <sqlFile path="changes/loadFLIGHTAVAILABILITY1.sql" relativeToChangelogFile="true"></sqlFile>
+        <sqlFile path="changes/loadFLIGHTAVAILABILITY2.sql" relativeToChangelogFile="true"></sqlFile>
     </changeSet>
 
 
