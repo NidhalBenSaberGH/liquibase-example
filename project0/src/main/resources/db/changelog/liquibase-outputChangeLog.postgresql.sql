@@ -1,7 +1,12 @@
 --liquibase formatted sql
 
---changeset nbensaber:1571912831346-1
-CREATE TABLE airlines (airline CHAR(2) NOT NULL, airline_full VARCHAR(24), basic_rate FLOAT8, distance_discount FLOAT8, business_level_factor FLOAT8, firstclass_level_factor FLOAT8, economy_seats INTEGER, business_seats INTEGER, firstclass_seats INTEGER, CONSTRAINT airlines_pk PRIMARY KEY (airline));
+--changeset nbensaber:1571926931281-1
+CREATE TABLE countries (country VARCHAR(26) NOT NULL, country_iso_code CHAR(2) NOT NULL, region VARCHAR(26), CONSTRAINT countries_pk PRIMARY KEY (country_iso_code));
+
+--changeset nbensaber:1571926931281-2
+ALTER TABLE countries ADD CONSTRAINT countries_unq_nm UNIQUE (country);
+
+PRIMARY KEY (airline));
 
 --changeset nbensaber:1571912831346-2
 CREATE TABLE cities (city_id INTEGER NOT NULL, city_name VARCHAR(24) NOT NULL, country VARCHAR(26) NOT NULL, airport VARCHAR(3), language VARCHAR(16), country_iso_code CHAR(2), CONSTRAINT cities_pk PRIMARY KEY (city_id));

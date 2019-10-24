@@ -7,6 +7,23 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liqui
 
     <changeSet id="1" author="nidhal">
         <comment>initiating database</comment>
+        <sqlFile path="changes/example1.sql" relativeToChangelogFile="true"></sqlFile>
+        <rollback>
+            <sqlFile path="changes/rollback/example1-rollback.sql"></sqlFile>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="2" author="nidhal">
+        <comment>initiating database</comment>
+        <sqlFile path="changes/example2.sql" relativeToChangelogFile="true"></sqlFile>
+        <rollback>
+            <sqlFile path="changes/rollback/example2-rollback.sql"></sqlFile>
+        </rollback>
+    </changeSet>
+
+    <!--
+    <changeSet id="1" author="nidhal">
+        <comment>initiating database</comment>
         <sqlFile path="changes/initial-schema-postgresql.sql" relativeToChangelogFile="true"></sqlFile>
         <rollback>
             <sqlFile path="changes/rollback/initial-schema-rollback-postgresql.sql"></sqlFile>
@@ -31,6 +48,7 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liqui
         <sqlFile path="changes/loadFLIGHTAVAILABILITY1.sql" relativeToChangelogFile="true"></sqlFile>
         <sqlFile path="changes/loadFLIGHTAVAILABILITY2.sql" relativeToChangelogFile="true"></sqlFile>
     </changeSet>
+    -->
 
 
 </databaseChangeLog>
