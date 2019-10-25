@@ -2,9 +2,40 @@
 xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <include file="/changes/script1.sql" relativeToChangelogFile="true" />
+
+    <include file="changes/001.sql" relativeToChangelogFile="true" />
+    <include file="changes/002.sql" relativeToChangelogFile="true" />
+    <!--
+    <changeSet id="1" author="nidhal">
+        <comment>initiating database</comment>
+        <sqlFile path="changes/initial-schema-postgresql.sql" relativeToChangelogFile="true"></sqlFile>
+        <rollback>
+            <sqlFile path="changes/rollback/initial-schema-rollback-postgresql.sql"></sqlFile>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="2" author="nidhal" failOnError="true" dbms="postgresql">
+        <comment>load countries</comment>
+        <sqlFile path="changes/loadCOUNTRIES.sql" relativeToChangelogFile="true"></sqlFile>
+    </changeSet>
+
+    <changeSet id="3" author="nidhal" failOnError="true" dbms="postgresql">
+        <comment>load cites</comment>
+        <sqlFile path="changes/loadCITIES.sql" relativeToChangelogFile="true"></sqlFile>
+    </changeSet>
+
+    <changeSet id="4" author="nidhal" failOnError="true" dbms="postgresql">
+        <comment>load data</comment>
+        <sqlFile path="changes/loadAIRLINES.sql" relativeToChangelogFile="true"></sqlFile>
+        <sqlFile path="changes/loadFLIGHTS1.sql" relativeToChangelogFile="true"></sqlFile>
+        <sqlFile path="changes/loadFLIGHTS2.sql" relativeToChangelogFile="true"></sqlFile>
+        <sqlFile path="changes/loadFLIGHTAVAILABILITY1.sql" relativeToChangelogFile="true"></sqlFile>
+        <sqlFile path="changes/loadFLIGHTAVAILABILITY2.sql" relativeToChangelogFile="true"></sqlFile>
+    </changeSet>
+    -->
+
 
 </databaseChangeLog>

@@ -1,0 +1,12 @@
+--liquibase formatted sql
+
+--changeset nidhal:1
+CREATE TABLE public.COUNTRIES
+   (
+		COUNTRY VARCHAR(26) NOT NULL CONSTRAINT COUNTRIES_UNQ_NM Unique,
+		COUNTRY_ISO_CODE CHAR(2) NOT NULL CONSTRAINT COUNTRIES_PK PRIMARY KEY,
+		REGION VARCHAR(26),
+		CONSTRAINT COUNTRIES_UC CHECK (country_ISO_code = upper(country_ISO_code) )
+   );
+
+--rollback DROP TABLE COUNTRIES;
